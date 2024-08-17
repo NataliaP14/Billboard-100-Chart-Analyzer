@@ -43,8 +43,10 @@ public class BillboardClient {
     	    	        				"8. Print songs by WeekID\n" +
     	    	        				"9. Print songs in alphabetical order by song name\n" +
     	    	        			    "10. Print songs in alphabetical order by performer name\n" +
-    	    	        			    "11.Exit the Program";
+    	    	        			    "11. Exit the Program\n" +
+    	    	        			    "Enter your choice below: ";
     	    	        				
+    	        	    	 			System.out.println("------------------------ MENU ----------------------------");
     	    	        				System.out.println(menuData);
 
     	        	        int choice;
@@ -59,42 +61,51 @@ public class BillboardClient {
     	        	        switch (choice) {
     	        	            case 1:
     	        	            	writer.flush();
-    	        	                billboard.naturalOrder(writer);
+    	        	                billboard.naturalOrder(writer);    	        	                System.out.println("Results have been printed out in output.txt\n");
     	        	                break;
     	        	            case 2:
     	        	            	writer.flush();
     	        	                billboard.moreThan12Weeks(writer);
+    	        	                System.out.println("Results have been printed out in output.txt\n");
     	        	                break;
     	        	            case 3:
     	        	            	writer.flush();
     	        	                billboard.songsInSpecificWeek(writer, input);
+    	        	                System.out.println("Results have been printed out in output.txt");
     	        	               break;
     	        	            case 4:
     	        	            	writer.flush();
     	        	                billboard.searchForPerformer(writer, input);
+    	        	                System.out.println("Results have been printed out in output.txt\n");
     	        	                break;
     	        	            case 5:
     	        	            	writer.flush();
     	        	                billboard.searchForSongName(writer, input);
+    	        	                System.out.println("Results have been printed out in output.txt\n");
     	        	               break;
     	        	            case 6:
     	        	            	writer.flush();
     	        	                billboard.instanceGreaterThan1(writer);
+    	        	                System.out.println("Results have been printed out in output.txt\n");
     	        	                break;
     	        	            case 7:
     	        	            	writer.flush();
     	        	                billboard.peakPosition1(writer);
+    	        	                System.out.println("Results have been printed out in output.txt\n");
     	        	              break;
     	        	            case 8:
     	        	            	writer.flush();
     	        	                billboard.orderByWeekID(writer);
+    	        	                System.out.println("Results have been printed out in output.txt\n");
     	        	               break;
     	        	            case 9:
     	        	                billboard.orderBySongName(writer);
+    	        	                System.out.println("Results have been printed out in output.txt\n");
     	        	               break;
     	        	            case 10:
     	        	            	writer.flush();
     	        	                billboard.orderByPerformerName(writer);
+    	        	                System.out.println("Results have been printed out in output.txt\n");
     	        	              break;  
     	        	            case 11:
     	        	                System.out.println("End");
